@@ -1,0 +1,38 @@
+html,body{
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: blue;
+}
+.header{
+  background-color: red;
+  height: 64px;
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
+  padding-left: 10px; 
+
+}
+.content{
+    background-color: rgb(238, 6, 6);
+    height: calc(100vh - 192px);
+    padding: 50px;
+    box-sizing:border-box;
+
+}
+
+.footer{
+   background-color: beige;
+   height: 128px;
+}
+/* COMPONENTS */
+.textfooter{
+  text-align: center;
+  color: gray;
+}
+.sr-only{
+  text-align: center;
+  color: gray;
+  padding: 20px;
+}
