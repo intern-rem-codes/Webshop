@@ -6,30 +6,55 @@ body {
   background-color: blue;
 }
 .header{
-  background-color: red;
+  background-color: #fff;
   height: 64px;
   /* justify-content: center; */
   align-items: center;
   display: flex;
   padding-left: 10px; 
+  border-bottom: 1px solid #ddd;
+  padding: 16px 32px;
 
+}
+/*Dat zorgt ervoor dat het logo links blijft en de ul naar rechts gaat.*/
+.logo{
+  margin-right: auto;
+}
+.logo img{
+  height: 100px;
+  cursor: pointer;
+}
+.nav a {
+  text-decoration: none;
+  color: #333;
+  
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
 }
 .content{
     background-color: rgb(238, 6, 6);
     height: calc(100vh - 192px);
     padding: 50px;
     box-sizing:border-box;
-
 }
 
 .footer{
    background-color: beige;
-   height: 128px;
+   padding: 20px 0;
+   text-align: center;
 }
 /* COMPONENTS */
 .textfooter{
   text-align: center;
   color: gray;
+  font-size: 14px;
 }
 .sr-only{
   text-align: center;

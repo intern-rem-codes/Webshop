@@ -1,10 +1,7 @@
-import Header from "./Header";
-
 export default function Footer() {
   return (
     <div className="footer">
-      <Header />
-      <div className="scoialmedia">
+      <div className="socialmedia">
         <a href="#"></a>
         <span className="sr-only">Facebook</span>
         <a href="#"></a>

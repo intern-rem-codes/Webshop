@@ -1,0 +1,30 @@
+
+[{
+    "id":1,
+    "name":"Ultra Slim Laptop",
+    "description": "High-performance laptop with a sleek design, perfect for work and play. Features the latest processor and long battery life.",
+    "price":"$999.99",
+    "image": ""
+},
+{
+    "id":2,
+    "name":"Noise Cancelling Headphones",
+    "description":"Immerse yourself in music with these premium noise-cancelling headphones. Comfortable ear cups and crystal clear sound.",
+    "price":"$249,99",
+    "image":""
+},
+{
+    "id":3,
+    "name":"Smart Fitness Watch",
+    "description": "Track your fitness goals with precision. Features heart rate monitoring, GPS, and sleep tracking.",
+    "price":"$199.50",
+    "image":""
+},
+{
+    "id":4,
+    "name":"Pro DSLR Camera",
+    "description": "Capture stunning photos and videos with this professional-grade DSLR camera. Includes a versatile lens kit.",
+    "price":"$1299.99",
+    "image":""
+}
+]
