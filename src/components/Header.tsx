@@ -1,6 +1,19 @@
+import type { Page } from "../App";
 import logo from "../assets/shoplogo.jpg";
 
-export default function Header() {
+interface IHeaderProps {
+  selectedMenuItem: Page;
+  onMenuItemClick: (item: Page) => void;
+}
+
+export default function Header(props: IHeaderProps) {
+  function handleMenuItemClick(item: Page) {
+    if (props.selectedMenuItem == item) {
+      return { color: "red" };
+    } else {
+      return {};
+    }
+  }
   return (
     <div className="header">
       <div className="logo">
@@ -11,13 +24,31 @@ export default function Header() {
 
       <ul className="nav">
         <li>
-          <a href="#">Home</a>
+          <a
+            style={handleMenuItemClick("home")}
+            onClick={() => props.onMenuItemClick("home")}
+            href="#"
+          >
+            Home
+          </a>
         </li>
         <li>
-          <a href="#">Products</a>
+          <a
+            style={handleMenuItemClick("products")}
+            onClick={() => props.onMenuItemClick("products")}
+            href="#"
+          >
+            Products
+          </a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a
+            style={handleMenuItemClick("cart")}
+            onClick={() => props.onMenuItemClick("cart")}
+            href="#"
+          >
+            Cart
+          </a>
         </li>
       </ul>
     </div>
