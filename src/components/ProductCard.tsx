@@ -1,17 +1,21 @@
-import image from "../assets/product.image.jpeg";
+import type { IProduct } from "../Interfaces/interfaces";
 
-export default function ProductCard() {
+interface IProductCardProps {
+  product: IProduct;
+}
+
+export default function ProductCard(props: IProductCardProps) {
   return (
     <div className="product-card">
       <a href="#"></a>
-      <img src={image} alt="product.title" />
+      <img src={props.product.image} alt="product.title" />
 
       <div className="product-info">
-        <h2>Product Title</h2>
-        <p>Description</p>
+        <h2>{props.product.name}</h2>
+        <p>{props.product.description}</p>
 
         <div className="product-footer">
-          <span className="price">$199,99</span>
+          <span className="price">${props.product.price}</span>
           <button>Add to Cart</button>
         </div>
       </div>

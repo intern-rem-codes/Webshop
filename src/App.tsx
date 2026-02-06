@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import Products from "./pages/Products";
+import Products from "./pages/Products.page";
 
 export type Page = "home" | "products" | "cart" | "";
 
