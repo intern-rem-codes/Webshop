@@ -2,8 +2,12 @@ import ProductCard from "../components/ProductCard";
 import { products as _products } from "../assets/utils/data";
 import AddProduct from "../components/AddProduct";
 import { useState } from "react";
+import type { IProduct } from "../Interfaces/interfaces.ts";
 
-export default function Products() {
+interface IProductsProps {
+  onAddToCart: (value: IProduct[]) => void;
+}
+export default function Products({ onAddToCart }: IProductsProps) {
   const [products, setProducts] = useState(_products);
   return (
     <div className="products">
