@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router";
 import CalculatorPage from "./pages/calculator.page.tsx";
 
 export type Page = "home" | "products" | "cart" | "calculator" | "";
-
+// test
 function App() {
   const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
 
