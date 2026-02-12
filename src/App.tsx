@@ -1,38 +1,42 @@
 import { useState } from "react";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Content from "./components/Content";
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
-import Products from "./pages/Products.page";
+import Footer from "./components/Footer.component.tsx";
+import Header from "./components/Header.component.tsx";
+import Content from "./components/Content.component.tsx";
+import HomePage from "./pages/Home.page.tsx";
+import CartPage from "./pages/Cart.page.tsx";
+import ProductsPage from "./pages/Products.page";
 import type { IProduct } from "./Interfaces/interfaces.ts";
+import { Route, Routes } from "react-router";
+import CalculatorPage from "./pages/calculator.page.tsx";
 
-export type Page = "home" | "products" | "cart" | "";
+export type Page = "home" | "products" | "cart" | "calculator" | "";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<Page>("");
-  console.log(selectedPage);
-
-  const [selectedProduct, setSelectedProduct] = useState<IProduct[]>([]);
-  console.log(selectedProduct);
-
-  function renderPage() {
-    if (selectedPage === "products") {
-      return <Products onAddToCart={setSelectedProduct} />;
-    }
-    if (selectedPage === "cart") {
-      return <Cart cartItems={setSelectedPage} />;
-    }
-    return <Home />;
-  }
+  const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
 
   return (
     <>
-      <Header
-        selectedMenuItem={selectedPage}
-        onMenuItemClick={(item) => setSelectedPage(item)}
-      />
-      <Content>{renderPage()}</Content>
+      <Header cartCount={selectedProducts.length} />
+      <Content>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/products"
+            element={
+              <ProductsPage
+                onAddToCart={(product) =>
+                  setSelectedProducts((prev) => [...prev, product])
+                }
+              />
+            }
+          />
+          <Route
+            path="/cart"
+            element={<CartPage cartItems={selectedProducts} />}
+          />
+          <Route path="/calculator" element={<CalculatorPage />} />
+        </Routes>
+      </Content>
       <Footer />
     </>
   );

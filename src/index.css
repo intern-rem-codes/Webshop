@@ -151,6 +151,72 @@ input{
 .add-product-button:hover{
   background: #4338ca;
 }
+.header-button {
+  background: none;
+  border: none;
+  outline: none;
+}
+.calculator-input {
+  margin-bottom: 16px;
+}
+.button-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.clear-button {
+  background-color: rgb(189, 189, 189);
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+.clear-button:hover{
+  background: rgb(120, 120, 120);
+}
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 8px;
+}
+
+.buttons-grid button {
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+/* maakt 0 dubbel zo breed */
+.zero-button {
+  grid-column: span 2;
+}
+
+.operator-button{
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+.operator-button:hover{
+  background: #4338ca;
+}
+.calculate-button{
+  background-color: rgb(33, 81, 33);
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+.calculate-button:hover{
+  background: rgb(21, 51, 21);
+} 
+.number-button{
+  background-color: rgb(93, 29, 29);
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+.number-button:hover{
+  background: rgb(63, 19, 19);
+}
 .footer{
    background-color: beige;
    padding: 20px 0;

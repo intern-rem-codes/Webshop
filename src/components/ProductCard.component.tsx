@@ -2,6 +2,7 @@ import type { IProduct } from "../Interfaces/interfaces";
 
 interface IProductCardProps {
   product: IProduct;
+  onAddToCart: (value: IProduct) => void;
 }
 
 export default function ProductCard(props: IProductCardProps) {
@@ -16,7 +17,9 @@ export default function ProductCard(props: IProductCardProps) {
 
         <div className="product-footer">
           <span className="price">${props.product.price}</span>
-          <button>Add to Cart</button>
+          <button onClick={() => props.onAddToCart(props.product)}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
