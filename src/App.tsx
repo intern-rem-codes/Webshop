@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router";
 import CalculatorPage from "./pages/calculator.page.tsx";
 
 export type Page = "home" | "products" | "cart" | "calculator" | "";
-// test
+// App component is the root of our application. It manages the state of selected products and renders the header, content, and footer.
 function App() {
   const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
 
